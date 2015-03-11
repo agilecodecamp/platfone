@@ -6,12 +6,12 @@
 	<link rel="stylesheet" href="css/lib/bootstrap/bootstrap.css">
 	<link rel="stylesheet" href="css/main.css">
 </head>
-<body ng-app="dreamBoard">
+<body ng-app="platfone">
 	<!-- header -->
 	<nav class="navbar navbar-default navbar-fixed-top">
 	  <div class="container">
 	    <div class="navbar-header">
-	    	<a class="navbar-brand" style="color: white">Platfone</a>
+	    	<a href="#/" class="navbar-brand" style="color: white">Platfone</a>
 	    </div>
 	    <form class="navbar-form navbar-left" role="search">
 		  	<div class="input-group">
@@ -23,7 +23,9 @@
 		      </span>
 		    </div><!-- /input-group -->
 			</form>
-			<button type="button" class="btn btn-default navbar-btn navbar-right">Start a Dream</button>
+	    <div class="navbar-header navbar-right">
+	    	<a href="#login" class="navbar-brand" style="color: white">Your Dream?</a>
+	    </div>
 	   </div>
 	</nav>
 	<!-- body -->
@@ -38,5 +40,9 @@
 	
 	<!-- initial js -->
 	<script src="js/initial.js"></script>
+	<!-- service -->
+	<script src="js/loginService.js"></script>
+	<!-- controller -->
+	<script src="js/loginController.js"></script>
 </body>
 </html>
