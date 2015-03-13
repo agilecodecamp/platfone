@@ -34,7 +34,7 @@
 						<div class="row">
 							<div class="col-md-12">
 								<form>
-									<textarea class="form-control" rows="3"></textarea>
+									<textarea class="form-control" rows="3" ng-model="content"></textarea>
 									<div class="top-buffer">
 										<button type="button" class="btn btn-default btn-lg" title="time">
 										  <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
@@ -43,7 +43,7 @@
 										  <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
 										</button>
 										<div class="pull-right">
-											<button type="button" class="btn btn-primary btn-lg">Post</button>
+											<button type="button" class="btn btn-primary btn-lg" ng-click="doPost(content)">Post</button>
 										</div>
 									</div>
 								</form>
@@ -55,20 +55,18 @@
 
 			<div class="row">
 				<!-- message -->
-				<div class="panel panel-default" ng-repeat="index in [1, 2, 3, 4, 5, 6, 7, 8, 9]">
+				<div class="panel panel-default" ng-repeat="post in postList track by $index">
 					<div class="panel-body">
 						<div class="row">
-							<div class="col-md-3">
-								<img class="img-rounded" alt="140x140" style="width: 140px;height: 140px;" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTQwIiBoZWlnaHQ9IjE0MCIgdmlld0JveD0iMCAwIDE0MCAxNDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxkZWZzLz48cmVjdCB3aWR0aD0iMTQwIiBoZWlnaHQ9IjE0MCIgZmlsbD0iI0VFRUVFRSIvPjxnPjx0ZXh0IHg9IjQ0LjA0Njg3NSIgeT0iNzAiIHN0eWxlPSJmaWxsOiNBQUFBQUE7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LWZhbWlseTpBcmlhbCwgSGVsdmV0aWNhLCBPcGVuIFNhbnMsIHNhbnMtc2VyaWYsIG1vbm9zcGFjZTtmb250LXNpemU6MTBwdDtkb21pbmFudC1iYXNlbGluZTpjZW50cmFsIj4xNDB4MTQwPC90ZXh0PjwvZz48L3N2Zz4=">
-							</div>
-							<div class="col-md-9">
-								<div class="well well-lg">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia autem vero earum voluptatum, eos natus nam distinctio nulla cum quibusdam, explicabo odio numquam magnam ea doloribus obcaecati ipsum aut cumque!</div>
+							<div class="col-md-12">
+								<div class="well well-lg" ng-bind="post.messages"></div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-
 		</div>
+
+		
 	</div>
 </div>

@@ -13,7 +13,8 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
     })
     .state('company', {
     	url: "/company/:id",
-    	templateUrl: "partials/company.html"
+    	templateUrl: "partials/company.html",
+      controller: 'postCtrl'
     });
 
   $urlRouterProvider.otherwise("/");
