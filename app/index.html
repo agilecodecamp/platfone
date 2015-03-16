@@ -8,13 +8,14 @@
 </head>
 <body ng-app="platfone">
 	<!-- header -->
-	<nav class="navbar navbar-default navbar-fixed-top">
+	<nav class="navbar navbar-default navbar-fixed-top" ng-controller="headerCtrl">
 	  <div class="container">
 	    <div class="navbar-header">
 	    	<a href="#/" class="navbar-brand" style="font-size: 28px; font-weight: bold; color: #5FB0E4;">Platfone</a>
 	    </div>
-	    <div class="navbar-header navbar-right">
-	    	<a href="#login" class="navbar-brand" style="font-size: 16px;">login</a>
+	    <div class="navbar-header navbar-right" ng-cloak>
+				<button ng-show="currentUser" class="btn navbar-btn" style="font-size: 16px;" ng-click="doLogout()">Logout</button>
+	    	<a ng-hide="currentUser" href="#login" class="navbar-brand" style="font-size: 16px;">login</a>
 	    </div>
 	    <form class="navbar-form navbar-left pull-right" role="search">
 		  	<div class="input-group" style="width: 300px;">
@@ -41,10 +42,11 @@
 	<!-- initial js -->
 	<script src="js/initial.js"></script>
 	<!-- service -->
-	<script src="js/loginService.js"></script>
-	<script src="js/postFactory.js"></script>
+	<script src="js/firebaseFactory.js"></script>
 	<!-- controller -->
+	<script src="js/headerController.js"></script>
 	<script src="js/loginController.js"></script>
+	<script src="js/signupController.js"></script>
 	<script src="js/postController.js"></script>
 </body>
 </html>

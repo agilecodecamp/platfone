@@ -36,14 +36,14 @@
 								<form>
 									<textarea class="form-control" rows="3" ng-model="content"></textarea>
 									<div class="top-buffer">
-										<button type="button" class="btn btn-default btn-lg" title="time">
+										<button type="button" class="btn btn-default" title="time">
 										  <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
 										</button>
-										<button type="button" class="btn btn-default btn-lg" title="location">
+										<button type="button" class="btn btn-default" title="location">
 										  <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
 										</button>
 										<div class="pull-right">
-											<button type="button" class="btn btn-primary btn-lg" ng-click="doPost(content)">Post</button>
+											<button type="button" class="btn btn-primary" ng-click="doPost(content)">Post</button>
 										</div>
 									</div>
 								</form>
@@ -55,11 +55,11 @@
 
 			<div class="row">
 				<!-- message -->
-				<div class="panel panel-default" ng-repeat="post in postList track by $index">
+				<div class="panel panel-default" ng-repeat="post in postList | sortByTime">
 					<div class="panel-body">
 						<div class="row">
 							<div class="col-md-12">
-								<div class="well well-lg" ng-bind="post.messages"></div>
+								<div class="well well-lg" ng-bind="post.message"></div>
 							</div>
 						</div>
 					</div>

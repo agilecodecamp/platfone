@@ -9,7 +9,13 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
     })
     .state('login', {
       url: "/login",
-      templateUrl: "partials/login.html"
+      templateUrl: "partials/login.html",
+      controller: 'loginCtrl'
+    })
+    .state('signup', {
+      url: "/signup",
+      templateUrl: "partials/signup.html",
+      controller: 'signupCtrl'
     })
     .state('company', {
     	url: "/company/:id",
@@ -19,3 +25,11 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
 
   $urlRouterProvider.otherwise("/");
 }]);
+
+app.filter('sortByTime', function() {
+  return function(items) {
+    return items.slice().sort(function (element1, element2) {
+      return element2.createAt - element1.createAt;
+    });
+  };
+});
