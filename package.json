@@ -1,0 +1,28 @@
+{
+  "name": "platfone",
+  "version": "1.0.0",
+  "description": "platfone for startup",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/agilecodecamp/platfone.git"
+  },
+  "keywords": [
+    "platfone"
+  ],
+  "author": "AgileCodeCamp",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/agilecodecamp/platfone/issues"
+  },
+  "homepage": "https://github.com/agilecodecamp/platfone",
+  "dependencies": {
+    "express": "^4.12.3"
+  }
+}
